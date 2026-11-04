@@ -1,0 +1,24 @@
+==============================================================================
+ SSH BRUTE-FORCE DETECTOR - REPORT
+==============================================================================
+ Source IPs seen:        5
+ Failed login attempts:  30
+ Alert threshold:        5 failed attempts
+ IPs flagged:            3
+------------------------------------------------------------------------------
+ Source IP        Failed  Users tried             Severity
+------------------------------------------------------------------------------
+ 203.0.113.45         18  admin, ftp, guest, ...  HIGH - brute-force pattern
+ 198.51.100.23         9  deploy                  CRITICAL - brute force then successful login
+                          -> SUCCESSFUL LOGIN: deploy at Nov  3 14:02:53
+ 192.0.2.10            2  roger                   MEDIUM - login after failed attempts
+                          -> SUCCESSFUL LOGIN: roger at Nov  3 14:01:52
+ 198.51.100.99         1  support                 LOW - a few failed attempts
+ 192.0.2.55            0  -                       INFO - successful logins only
+==============================================================================
+ Recommended next steps:
+  1. Block flagged IPs at the firewall (or with fail2ban).
+  2. For any successful login after failures: check that account's activity,
+     reset its password and look for new users, cron jobs or SSH keys.
+  3. Disable password login for SSH and use key-based authentication.
+ CSV saved to sample_output/report.csv

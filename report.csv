@@ -1,0 +1,6 @@
+source_ip,failed_attempts,users_tried,first_seen,last_seen,success_after_fail,severity
+203.0.113.45,18,admin;ftp;guest;oracle;pi;postgres;root;test;ubuntu;user,Nov  3 14:00:27,Nov  3 14:01:01,,HIGH - brute-force pattern
+198.51.100.23,9,deploy,Nov  3 14:02:25,Nov  3 14:02:53,deploy at Nov  3 14:02:53,CRITICAL - brute force then successful login
+192.0.2.10,2,roger,Nov  3 14:01:41,Nov  3 14:01:52,roger at Nov  3 14:01:52,MEDIUM - login after failed attempts
+198.51.100.99,1,support,Nov  3 14:03:53,Nov  3 14:03:53,,LOW - a few failed attempts
+192.0.2.55,0,,Nov  3 14:00:25,Nov  3 14:00:25,,INFO - successful logins only
